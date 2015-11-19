@@ -24,7 +24,6 @@ import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.provider.MediaStore.Images;
-import android.util.Log;
 
 public class DataItemManager {
 
@@ -276,14 +275,14 @@ public class DataItemManager {
 			fileOutputStream.write(bytes.toByteArray());
 			addInsertImageByPath(cr, pPath, title, description);
 
-//			IntentFilter intentFilter = new IntentFilter(
-//					Intent.ACTION_MEDIA_SCANNER_STARTED);
-//			intentFilter.addAction(Intent.ACTION_MEDIA_SCANNER_FINISHED);
-//			intentFilter.addDataScheme("file");
-//			Uri uri = Uri.parse("file://"
-//					+ Environment.getExternalStorageDirectory());
-//			mContext.sendBroadcast(new Intent(
-//					Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, uri));
+			// IntentFilter intentFilter = new IntentFilter(
+			// Intent.ACTION_MEDIA_SCANNER_STARTED);
+			// intentFilter.addAction(Intent.ACTION_MEDIA_SCANNER_FINISHED);
+			// intentFilter.addDataScheme("file");
+			// Uri uri = Uri.parse("file://"
+			// + Environment.getExternalStorageDirectory());
+			// mContext.sendBroadcast(new Intent(
+			// Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, uri));
 
 			Intent mediaScanIntent = new Intent(
 					Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
@@ -318,7 +317,7 @@ public class DataItemManager {
 			Bitmap bm = BitmapFactory.decodeFile(imagePath);
 			ret = addInsertImage(cr, bm, title, description);
 			bm.recycle();
-		
+
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -366,8 +365,11 @@ public class DataItemManager {
 				Bitmap miniThumb = Images.Thumbnails.getThumbnail(cr, id,
 						Images.Thumbnails.MINI_KIND, null);
 				// This is for backward compatibility.
-				Bitmap microThumb = saveStoreThumbnail(cr, miniThumb, id, 50F,
-						50F, Images.Thumbnails.MICRO_KIND);
+				// Bitmap microThumb = saveStoreThumbnail(cr, miniThumb, id,
+				// 50F,
+				// 50F, Images.Thumbnails.MICRO_KIND);
+				saveStoreThumbnail(cr, miniThumb, id, 50F, 50F,
+						Images.Thumbnails.MICRO_KIND);
 			} else {
 
 				cr.delete(url, null, null);

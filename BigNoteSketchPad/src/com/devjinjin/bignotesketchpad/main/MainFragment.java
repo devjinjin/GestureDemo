@@ -3,7 +3,6 @@ package com.devjinjin.bignotesketchpad.main;
 import java.io.File;
 import java.util.ArrayList;
 
-import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.BitmapFactory.Options;
@@ -23,7 +22,6 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.devjinjin.bignotesketchpad.BaseFragment;
 import com.devjinjin.bignotesketchpad.R;

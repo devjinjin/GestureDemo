@@ -2,15 +2,8 @@ package com.devjinjin.bignotesketchpad.drawing.tool;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.ComposePathEffect;
-import android.graphics.CornerPathEffect;
-import android.graphics.DashPathEffect;
-import android.graphics.DiscretePathEffect;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.graphics.Path.Direction;
-import android.graphics.PathDashPathEffect;
-import android.graphics.SumPathEffect;
 import android.util.Log;
 import android.view.MotionEvent;
 
