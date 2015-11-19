@@ -8,6 +8,7 @@ import android.gesture.Gesture;
 import android.gesture.GestureOverlayView;
 import android.gesture.GestureOverlayView.OnGesturePerformedListener;
 import android.gesture.Prediction;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,6 +25,9 @@ public class MainActivity extends Activity implements
 		GestureStoreManager.getInstance(getApplicationContext());
 
 		GestureOverlayView gestures = (GestureOverlayView) findViewById(R.id.gestures);
+		gestures.setGestureColor(Color.RED);
+		gestures.setUncertainGestureColor(0x48FF0000);
+		gestures.setGestureStrokeWidth(18.0f);
 		gestures.addOnGesturePerformedListener(this);
 
 	}

@@ -18,7 +18,9 @@
 */
 -->
 <resources>
-    <color name="gesture_color">#FFFFFF00</color>
-        <color name="toast_color">#FF0100FF</color>
-            <color name="white">#ffffffff</color>
+
+    <color name="gesture_color">#FFFF0000</color>
+    <color name="toast_color">#FF0100FF</color>
+    <color name="white">#ffffffff</color>
+
 </resources>
