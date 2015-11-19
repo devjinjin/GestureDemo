@@ -1,7 +1,6 @@
-package com.example.gesturedemo;
+package com.devjinjin.gesturedemo;
 
 import android.content.Context;
-import android.os.CountDownTimer;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;

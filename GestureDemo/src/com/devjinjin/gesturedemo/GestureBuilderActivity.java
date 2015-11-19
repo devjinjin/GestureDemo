@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.gesturedemo;
+package com.devjinjin.gesturedemo;
 
 import java.io.File;
 import java.util.Collections;
@@ -81,7 +81,6 @@ public class GestureBuilderActivity extends ListActivity {
 	private Dialog mRenameDialog;
 	private EditText mInput;
 	private NamedGesture mCurrentRenameGesture;
-
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -321,7 +320,7 @@ public class GestureBuilderActivity extends ListActivity {
 		GestureStoreManager.getInstance(getApplicationContext()).getStore()
 				.save();
 		GestureStoreManager.getInstance(getApplicationContext()).reload();
-		
+
 		final GesturesAdapter adapter = mAdapter;
 		adapter.setNotifyOnChange(false);
 		adapter.remove(gesture);
@@ -329,8 +328,6 @@ public class GestureBuilderActivity extends ListActivity {
 		checkForEmpty();
 		adapter.notifyDataSetChanged();
 
-		
-		
 		Toast.makeText(this, R.string.gestures_delete_success,
 				Toast.LENGTH_SHORT).show();
 	}

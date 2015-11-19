@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.gesturedemo;
+package com.devjinjin.gesturedemo;
 
 import java.io.File;
 

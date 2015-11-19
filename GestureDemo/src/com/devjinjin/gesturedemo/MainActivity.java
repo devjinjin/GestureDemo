@@ -1,4 +1,4 @@
-package com.example.gesturedemo;
+package com.devjinjin.gesturedemo;
 
 import java.util.ArrayList;
 
@@ -9,7 +9,6 @@ import android.gesture.GestureOverlayView;
 import android.gesture.GestureOverlayView.OnGesturePerformedListener;
 import android.gesture.Prediction;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -33,21 +32,11 @@ public class MainActivity extends Activity implements
 		ArrayList<Prediction> predictions = GestureStoreManager
 				.getInstance(getApplicationContext()).getStore()
 				.recognize(gesture);
-		// We want at least one prediction
 		if (predictions.size() > 0) {
 			Prediction prediction = predictions.get(0);
-			// We want at least some confidence in the result
 			if (prediction.score > 5.0) {
-				// Show the spell
-
-				// Toast toast = Toast.makeText(this, prediction.name +
-				// "value :" +prediction.score, 50000);
-				// // toast.setDuration(50000);
-				// toast.show();
-
 				final CustomToast toast = new CustomToast(this);
 				toast.showToast(Toast.LENGTH_LONG, prediction.name);
-				
 			}
 		}
 	}
